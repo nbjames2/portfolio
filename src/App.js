@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './App.scss';
+import Header from './components/js/Header';
+import Projects from './components/js/Projects';
+import Skills from './components/js/Skills';
+
 
 function App() {
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShowContent(true), 7000);
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <p className={showContent ? 'personal-blurb top-blurb visible' : 'personal-blurb top-blurb'}>Hi, I'm Nick, a fullstack developer specializing in Node and MongoDB or PostgreSQL on the backend and React on the frontend. I also have exprerience in iOS and android develpment.</p>
+      <p className={showContent ? 'personal-blurb visible' : 'personal-blurb'}>Why don't you scroll down and stay a while?</p>
+      {showContent && <Projects />}
+      {showContent && <Skills />}
     </div>
   );
 }

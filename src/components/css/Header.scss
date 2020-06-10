@@ -1,0 +1,213 @@
+.app-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+
+  .contact-section {
+    position: absolute;
+    top: 24px; right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contact-icon {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .name-title {
+    margin: 48px;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #66fcf1;
+    text-decoration: underline;
+
+    &:hover, :active {
+      .name-fade {
+        animation: flipLettersUp 1s forwards;
+        transform-origin: center 55px;
+        perspective: 500px;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 68px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .name-fade {
+    animation: flipLettersDown 3s forwards;
+    transform-origin: center 55px;
+    perspective: 500px;
+
+    &.part1 {
+      animation-delay: 7.5s;
+    }
+
+    &.part2 {
+      animation-delay: 11s;
+    }
+
+    &.part3 {
+      animation-delay: 8s;
+    }
+
+  }
+
+  
+  .bear-background-circle-background {
+    animation: shrinkBear 1s cubic-bezier(0.3,-0.61, 0.72, 1.53);
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    background: rgba(31, 40, 51, 0.4);
+    border: 2px solid #66fcf1;
+    border-radius: 50%;
+    
+    .bear-background-circle {
+      border: 4px solid #66fcf1;
+      border-radius: 50%;
+      margin: 8px;
+      padding: 16px;
+      box-sizing: border-box;
+      width: fit-content;
+      height: fit-content;
+      
+      #bearSpreaderSVG {
+        width: 500px;
+        height: 500px;
+      }
+    }
+
+  }
+
+  #leftArm {
+    animation: bearArm 5s;
+    transform-origin: 126px 906px;
+    animation-fill-mode: forwards;
+  }
+
+  #knife {
+    animation: knife 5s;
+    transform-origin: 110px 943px;
+    animation-fill-mode: forwards;
+  }
+
+  #spreadingBody {
+    animation: spreader 5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.name-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-header {
+    .contact-section {
+      position: relative;
+      align-self: flex-end;
+      margin: 16px 16px 0 0;
+    }
+
+    .name-title {
+      margin: 16px;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+    
+    .name-fade {
+      transform-origin: center 32.25px;
+    }
+      
+    .bear-background-circle-background .bear-background-circle #bearSpreaderSVG {
+      width: 70vw;
+      height: 70vw;
+    }
+  }
+}
+
+@keyframes bearArm {
+  20% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: rotate(45deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes knife {
+  20% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate(-15px, -15px) rotate(75deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes spreader {
+  20% {
+    clip-path: polygon(0 0, 100% 0, 82% 46%, 0% 96%);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 75% 86%, 6% 0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes shrinkBear {
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes flipLettersDown {
+  0% {
+    transform: rotateX(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  5% {
+    transform: rotateX(-15deg);
+    animation-timing-function: ease-in-out;
+  }
+  65% {
+    transform: rotateX(180deg);
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: rotateX(220deg);
+    animation-timing-function: ease-in-out;
+  }
+  90% {
+    transform: rotateX(170deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotateX(180deg);
+    animation-timing-function: ease-in-out;
+    color: #236863;
+  }
+}
+
+@keyframes flipLettersUp {
+  100% {
+    transform: rotateX(1080deg);
+    animation-timing-function: ease-in-out;
+    color: #66fcf1;
+  }
+}

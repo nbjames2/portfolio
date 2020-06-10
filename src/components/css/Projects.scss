@@ -1,0 +1,30 @@
+.projects-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  z-index: 1;
+}
+
+.projects-box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-around;
+  align-items: center;
+  padding: 36px;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-box-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+  }
+}

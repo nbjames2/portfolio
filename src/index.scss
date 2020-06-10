@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-track-color: #334e58;
+  scrollbar-color: #02111b;
+  scrollbar-width: 10px;
+  font-size: 24px;
+  font-family: 'Oswald', sans-serif;
+  &::-webkit-scrollbar {
+    background: #334e58;
+    width: 10px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Special Elite', cursive;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #02111b;
+    border-radius: 10px;
+    box-shadow: 0 0 5px grey;
+    background-clip: content-box;
+  }
+
+  #background-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  #root {
+    background-image: url('/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: rgb(11, 12, 16);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
