@@ -26,6 +26,8 @@ export default (props) => {
             <li>Apollo</li>
             <li>Sequelize</li>
             <li>Mongoose</li>
+            <li>Docker</li>
+            <li>Nginx</li>
           </ul>
         </div>
         <div className='technologies-list-wrapper'>

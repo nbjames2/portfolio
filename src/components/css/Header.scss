@@ -24,13 +24,22 @@
     padding: 8px;
     box-sizing: border-box;
     color: #66fcf1;
-    text-decoration: underline;
+    
+    .name-title-piece {
+      text-decoration: underline;
+    }
+
+    i {
+      text-decoration: none;
+      cursor: pointer;
+      align-self: flex-start
+    }
 
     &:hover, :active {
       .name-fade {
         animation: flipLettersUp 1s forwards;
         transform-origin: center 55px;
-        perspective: 500px;
+        perspective: 1000px;
       }
     }
   }
@@ -44,7 +53,7 @@
   .name-fade {
     animation: flipLettersDown 3s forwards;
     transform-origin: center 55px;
-    perspective: 500px;
+    perspective: 1000px;
 
     &.part1 {
       animation-delay: 7.5s;
