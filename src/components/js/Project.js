@@ -23,7 +23,7 @@ export default (props) => {
           <i className='material-icons-outlined' onClick={() => setInfoOpen(true)}>info</i>
         </div>
         <div className='image-wrapper' onClick={() => openProject()}>
-          <img src={props.image} alt='project screenshot' alt={'screenshot for ' + props.title}/>
+          <img src={props.image} alt={'screenshot for ' + props.title}/>
           <div className='project-tech'>
             <p>{props.description}</p>
           </div>
