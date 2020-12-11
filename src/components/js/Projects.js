@@ -8,6 +8,18 @@ export default (props) => {
       <h2 className='title'>Projects</h2>
       <div className='projects-box-wrapper'>
         <Project
+          title='React Table Demo'
+          description='Built using pure React without any special table libraries'
+          image='/tableDemo.png'
+          link='http://table-demo.bairdjames.com/'
+          info='This is a simple front end only demo of a table to demonstrate my frontend React skills using:  
+            <ul>
+              <li>React</li>
+              <li>Sass</li>
+              <li>Docker</li>
+            </ul>'
+        />
+        <Project
           title='Music Notifier'
           description='Built using Node, EJS, and PostreSQL'
           image='/musicNotifierScreenShot.png'
