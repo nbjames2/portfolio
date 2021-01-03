@@ -8,9 +8,26 @@ export default (props) => {
       <h2 className='title'>Projects</h2>
       <div className='projects-box-wrapper'>
         <Project
+          title='React Itemlist Demo'
+          description='Built using React with material-ui for styling and firebase for auth on both front and backend.'
+          image='/itemlistScreenshot.png'
+          link='http://itemlist.bairdjames.com/'
+          info='This is a simple full stack demo of an item list to demonstrate CRUD action and using an external authentication library. Stack used:  
+            <ul>
+              <li>React</li>
+              <li>Sass</li>
+              <li>Material-ui</li>
+              <li>MongoDB</li>
+              <li>Firebase Auth</li>
+              <li>NodeJS</li>
+              <li>Express</li>
+              <li>Docker</li>
+            </ul>'
+        />
+        <Project
           title='React Table Demo'
           description='Built using pure React without any special table libraries'
-          image='/tableDemo.png'
+          image='/tableDemoScreenshot.png'
           link='http://table-demo.bairdjames.com/'
           info='This is a simple front end only demo of a table to demonstrate my frontend React skills using:  
             <ul>
