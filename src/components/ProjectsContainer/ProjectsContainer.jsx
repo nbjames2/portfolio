@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/Projects.scss';
-import Project from './Project';
+import './ProjectsContainer.scss';
+import { Project } from 'Components';
 
-export default (props) => {
+const ProjectsContainer = (props) => {
   return (
     <section className='projects-container'>
       <h2 className='title'>Projects</h2>
@@ -12,7 +12,7 @@ export default (props) => {
           description='Built using React with material-ui for styling and firebase for auth on both front and backend.'
           image='/itemlistScreenshot.png'
           link='http://itemlist.bairdjames.com/'
-          info='This is a simple full stack demo of an item list to demonstrate CRUD action and using an external authentication library. Stack used:  
+          info='This is a simple full stack demo of an item list to demonstrate CRUD action and using an external authentication library. Stack used:
             <ul>
               <li>React</li>
               <li>Sass</li>
@@ -29,7 +29,7 @@ export default (props) => {
           description='Built using pure React without any special table libraries'
           image='/tableDemoScreenshot.png'
           link='http://table-demo.bairdjames.com/'
-          info='This is a simple front end only demo of a table to demonstrate my frontend React skills using:  
+          info='This is a simple front end only demo of a table to demonstrate my frontend React skills using:
             <ul>
               <li>React</li>
               <li>Sass</li>
@@ -41,7 +41,7 @@ export default (props) => {
           description='Built using Node, EJS, and PostreSQL'
           image='/musicNotifierScreenShot.png'
           link='http://music.bairdjames.com/'
-          info='This app allows the user to create an account, search for bands that they like and favourite them. Anytime one of their favourited artists releases something new the user will receive an email notifying them of the new release.<br><br>Technologies used:  
+          info='This app allows the user to create an account, search for bands that they like and favourite them. Anytime one of their favourited artists releases something new the user will receive an email notifying them of the new release.<br><br>Technologies used:
             <ul>
               <li>SendGrid</li>
               <li>Spotify API</li>
@@ -89,4 +89,6 @@ export default (props) => {
       </div>
     </section>
   );
-}
+};
+
+export { ProjectsContainer };

@@ -1,0 +1,42 @@
+.bear-background-circle-background {
+  animation: shrinkBear 1s cubic-bezier(0.3,-0.61, 0.72, 1.53);
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  background: rgba(31, 40, 51, 0.4);
+  border: 2px solid #66fcf1;
+  border-radius: 50%;
+  margin-top: 16px;
+  
+  .bear-background-circle {
+    border: 4px solid #66fcf1;
+    border-radius: 50%;
+    margin: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    
+    #bearSpreaderSVG {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+}
+
+#leftArm {
+  animation: bearArm 5s;
+  transform-origin: 126px 906px;
+  animation-fill-mode: forwards;
+}
+
+#knife {
+  animation: knife 5s;
+  transform-origin: 110px 943px;
+  animation-fill-mode: forwards;
+}
+
+#spreadingBody {
+  animation: spreader 5s;
+  animation-fill-mode: forwards;
+}

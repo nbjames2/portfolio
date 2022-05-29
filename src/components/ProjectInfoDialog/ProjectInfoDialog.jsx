@@ -1,6 +1,7 @@
 import React from 'react';
+import './ProjectInfoDialog.scss';
 
-export default function ProjectInfoDialog (props) {
+const ProjectInfoDialog = (props) => {
   return (
     <div className='info-dialog-container'>
       <div className='info-dialog-inner'>
@@ -14,4 +15,6 @@ export default function ProjectInfoDialog (props) {
       </div>
     </div>
   );
-}
+};
+
+export { ProjectInfoDialog };

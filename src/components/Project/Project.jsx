@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ProjectInfoDialog from './ProjectInfoDialog';
-import '../css/Project.scss';
+import { ProjectInfoDialog } from 'Components';
+import './Project.scss';
 
-export default (props) => {
+const Project = (props) => {
   const [isVisible, setIsVisible] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
 
@@ -16,7 +16,7 @@ export default (props) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <div className='project-wrapper' style={{transform: isVisible ? 'translateY(0)' : 'translateY(-2000px)'}}>
         <div className='project-title-row'>
           <h3>{props.title}</h3>
@@ -30,6 +30,8 @@ export default (props) => {
         </div>
       </div>
       {infoOpen && <ProjectInfoDialog title={props.title} info={props.info} closeDialog={() => setInfoOpen(false)} />}
-    </React.Fragment>
+    </>
   );
-}
+};
+
+export { Project };

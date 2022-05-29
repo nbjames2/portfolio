@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/Skills.scss';
+import './Skills.scss';
 
-export default (props) => {
+const Skills = (props) => {
   return (
     <section className='skills-container'>
       <h2 className='title'>Non-exhaustive List of Technologies That I Use and Have Used</h2>
@@ -11,6 +11,7 @@ export default (props) => {
           <ul>
             <li>Javascript</li>
             <li>React</li>
+            <li>React Native</li>
             <li>CSS3</li>
             <li>SASS</li>
             <li>Java</li>
@@ -22,6 +23,8 @@ export default (props) => {
           <ul>
             <li>Node.js</li>
             <li>Express</li>
+            <li>Elixir</li>
+            <li>Phoenix</li>
             <li>GraphQL</li>
             <li>Apollo</li>
             <li>Sequelize</li>
@@ -41,4 +44,6 @@ export default (props) => {
       </div>
     </section>
   );
-}
+};
+
+export { Skills };
