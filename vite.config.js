@@ -4,7 +4,10 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [react(), svgr()],
+  plugins: [
+    react(),
+    svgr({ exportAsDefault: false })
+  ],
   build: {
     outDir: 'build'
   },
@@ -13,7 +16,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       Components: path.resolve(__dirname, './src/components'),
-      Images: path.resolve(__dirname, './src/images'),
+      Images: path.resolve(__dirname, './src/images')
     }
   }
 });

@@ -1,0 +1,16 @@
+.skill-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s cubic-bezier(0.24, 0.9, 0.47, 1.99);
+  cursor: default;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  svg {
+    width: 48px;
+    margin-right: 1rem;
+  }
+}

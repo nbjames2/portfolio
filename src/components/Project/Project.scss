@@ -7,10 +7,12 @@
     cursor: pointer;
     border-radius: 7px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
       width: 250px;
-      // height: 200px;
     }
     
     &:hover {
@@ -22,7 +24,7 @@
     .project-tech {
       position: absolute;
       top: 0; bottom: 0; left: 0; right: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.7);
       opacity: 0;
       transition: opacity .5s ease-in-out;
       display: flex;

@@ -28,52 +28,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    .title-bar-piece {
-      text-decoration: underline;
-    }
 
     .title-bar-spacer {
       width: 100px;
-    }
-
-    i {
-      text-decoration: none;
-      cursor: pointer;
-      align-self: flex-start
-      
-    }
-
-    &:hover, :active {
-      .name-fade {
-        animation: flipLettersUp 1s forwards;
-        transform-origin: center 55px;
-        perspective: 1000px;
-      }
-    }
-  }
-
-  h1 {
-    font-size: 68px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .name-fade {
-    animation: flipLettersDown 3s forwards;
-    transform-origin: center 55px;
-    perspective: 1000px;
-
-    &.part1 {
-      animation-delay: 7.5s;
-    }
-
-    &.part2 {
-      animation-delay: 11s;
-    }
-
-    &.part3 {
-      animation-delay: 8s;
     }
   }
 }
@@ -89,93 +46,10 @@
     .title-bar {
       margin: 16px;
     }
-  
-    h1 {
-      font-size: 30px;
-    }
-    
-    .name-fade {
-      transform-origin: center 32.25px;
-    }
       
     .bear-background-circle-background .bear-background-circle #bearSpreaderSVG {
       width: 70vw;
       height: 70vw;
     }
-  }
-}
-
-@keyframes bearArm {
-  20% {
-    transform: rotate(0deg);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: rotate(45deg);
-    animation-timing-function: ease-out;
-  }
-}
-
-@keyframes knife {
-  20% {
-    transform: rotate(0deg);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translate(-15px, -15px) rotate(75deg);
-    animation-timing-function: ease-out;
-  }
-}
-
-@keyframes spreader {
-  20% {
-    clip-path: polygon(0 0, 100% 0, 82% 46%, 0% 96%);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    clip-path: polygon(0 0, 100% 0, 75% 86%, 6% 0);
-    animation-timing-function: ease-out;
-  }
-}
-
-@keyframes shrinkBear {
-  100% {
-    transform: scale(0.9);
-  }
-}
-
-@keyframes flipLettersDown {
-  0% {
-    transform: rotateX(0deg);
-    animation-timing-function: ease-in-out;
-  }
-  5% {
-    transform: rotateX(-15deg);
-    animation-timing-function: ease-in-out;
-  }
-  65% {
-    transform: rotateX(180deg);
-    animation-timing-function: ease-in-out;
-  }
-  80% {
-    transform: rotateX(220deg);
-    animation-timing-function: ease-in-out;
-  }
-  90% {
-    transform: rotateX(170deg);
-    animation-timing-function: ease-in-out;
-  }
-  100% {
-    transform: rotateX(180deg);
-    animation-timing-function: ease-in-out;
-    color: #236863;
-  }
-}
-
-@keyframes flipLettersUp {
-  100% {
-    transform: rotateX(1080deg);
-    animation-timing-function: ease-in-out;
-    color: #66fcf1;
   }
 }

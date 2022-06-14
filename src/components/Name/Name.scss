@@ -1,0 +1,95 @@
+.name-container {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #66fcf1;
+  margin: 0 1rem;
+
+  i {
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    text-decoration: none;
+    cursor: pointer;    
+  }
+
+  &:hover, :active {
+    .name-fade {
+      animation: flipLettersUp 1s forwards;
+      transform-origin: center 55px;
+      perspective: 1000px;
+    }
+  }
+
+  h1 {
+    font-size: 68px;
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+  }
+  
+  .name-fade {
+    animation: flipLettersDown 3s forwards;
+    transform-origin: center 36px;
+    perspective: 1000px;
+
+    &.part1 {
+      animation-delay: 1s;
+    }
+
+    &.part2 {
+      animation-delay: 4s;
+    }
+
+    &.part3 {
+      animation-delay: 1.5s;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .name-container{
+      h1 {
+        font-size: 30px;
+      }
+      
+      .name-fade {
+        transform-origin: center 32.25px;
+      }
+    }
+  }
+  
+  @keyframes flipLettersDown {
+    0% {
+      transform: rotateX(0deg);
+      animation-timing-function: ease-in-out;
+    }
+    5% {
+      transform: rotateX(-15deg);
+      animation-timing-function: ease-in-out;
+    }
+    65% {
+      transform: rotateX(180deg);
+      animation-timing-function: ease-in-out;
+    }
+    80% {
+      transform: rotateX(220deg);
+      animation-timing-function: ease-in-out;
+    }
+    90% {
+      transform: rotateX(170deg);
+      animation-timing-function: ease-in-out;
+    }
+    100% {
+      transform: rotateX(180deg);
+      animation-timing-function: ease-in-out;
+      color: #236863;
+    }
+  }
+  
+  @keyframes flipLettersUp {
+    100% {
+      transform: rotateX(1080deg);
+      animation-timing-function: ease-in-out;
+      color: #66fcf1;
+    }
+  }
+}

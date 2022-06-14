@@ -1,5 +1,27 @@
 import React from 'react';
 import './Skills.scss';
+import { Skill } from 'Components';
+import {
+  Apollo,
+  Css,
+  Docker,
+  Elixir,
+  Express,
+  Firebase,
+  Graphql,
+  Java,
+  Javascript,
+  Mongodb,
+  Mongoose,
+  Nginx,
+  Node,
+  ObjC,
+  Phoenix,
+  Postgres,
+  ReactJS,
+  Sass,
+  Sequelize
+} from 'Images';
 
 const Skills = (props) => {
   return (
@@ -8,38 +30,38 @@ const Skills = (props) => {
       <div className='lists-wrapper'>
         <div className='technologies-list-wrapper'>
           <h3 className='title'>Front-end</h3>
-          <ul>
-            <li>Javascript</li>
-            <li>React</li>
-            <li>React Native</li>
-            <li>CSS3</li>
-            <li>SASS</li>
-            <li>Java</li>
-            <li>Objective-C</li>
-          </ul>
+          <div className='list-container'>
+            <Skill title='Javascript' icon={<Javascript />} />
+            <Skill title='React' icon={<ReactJS />} />
+            <Skill title='React Native' icon={<ReactJS />} />
+            <Skill title='CSS' icon={<Css />} />
+            <Skill title='Sass' icon={<Sass />} />
+            <Skill title='Java' icon={<Java />} />
+            <Skill title='Objective-C' icon={<ObjC />} />
+          </div>
         </div>
         <div className='technologies-list-wrapper'>
           <h3 className='title'>Back-end</h3>
-          <ul>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>Elixir</li>
-            <li>Phoenix</li>
-            <li>GraphQL</li>
-            <li>Apollo</li>
-            <li>Sequelize</li>
-            <li>Mongoose</li>
-            <li>Docker</li>
-            <li>Nginx</li>
-          </ul>
+          <div className='list-container'>
+            <Skill title='NodeJS' icon={<Node />} />
+            <Skill title='ExpressJS' icon={<Express />} />
+            <Skill title='Elixir' icon={<Elixir />} />
+            <Skill title='Phoenix' icon={<Phoenix />} />
+            <Skill title='GraphQL' icon={<Graphql />} />
+            <Skill title='Apollo' icon={<Apollo />} />
+            <Skill title='Sequelize' icon={<Sequelize />} />
+            <Skill title='MongooseJS' icon={<Mongoose />} />
+            <Skill title='Docker' icon={<Docker />} />
+            <Skill title='Nginx' icon={<Nginx />} />
+          </div>
         </div>
         <div className='technologies-list-wrapper'>
           <h3 className='title'>DB</h3>
-          <ul>
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-            <li>Firebase</li>
-          </ul>
+          <div className='list-container'>
+            <Skill title='MongoDB' icon={<Mongodb />} />
+            <Skill title='PostgreSQL' icon={<Postgres />} />
+            <Skill title='Firebase' icon={<Firebase />} />
+          </div>
         </div>
       </div>
     </section>
