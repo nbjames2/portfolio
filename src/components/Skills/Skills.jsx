@@ -69,3 +69,7 @@ const Skills = (props) => {
 };
 
 export { Skills };
+
+// color: #2f406a;
+// color: #2379bd;
+// color: #03afef;

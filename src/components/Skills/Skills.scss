@@ -22,6 +22,12 @@
     margin-top: 24px;
   }
 
+  .technologies-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
   .list-container {
     display: flex;
     flex-direction: column;

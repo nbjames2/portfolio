@@ -4,10 +4,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    svgr({ exportAsDefault: false })
-  ],
+  plugins: [react(), svgr()],
   build: {
     outDir: 'build'
   },

@@ -9,7 +9,7 @@ const ProjectInfoDialog = ({ title, info, handleCloseButton }) => {
         <div className='info-dialog-inner-inner'>
           <div className='project-title-row'>
             <h3>{title}</h3>
-            <i className='material-icons-outlined' onClick={handleCloseButton}>close</i>
+            <i className='material-icons-outlined close-button' onClick={handleCloseButton}>close</i>
           </div>
           <p dangerouslySetInnerHTML={{ __html: info }} />
         </div>
