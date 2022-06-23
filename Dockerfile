@@ -5,7 +5,6 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 COPY . .
-RUN npm install yarn -g
 RUN yarn install
 RUN yarn run build
 
