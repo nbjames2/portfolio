@@ -56,7 +56,7 @@ const Skills = (props) => {
           </div>
         </div>
         <div className='technologies-list-wrapper'>
-          <h3 className='title'>DB</h3>
+          <h3 className='title'>Database</h3>
           <div className='list-container'>
             <Skill title='MongoDB' icon={<Mongodb />} />
             <Skill title='PostgreSQL' icon={<Postgres />} />

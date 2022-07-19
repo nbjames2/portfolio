@@ -1,9 +1,10 @@
 import React from 'react';
 import './Skill.scss';
+import OutsideLink from '../../util/OutsideLink';
 
-const Skill = ({ title, icon, link }) => {
+const Skill = ({ title, icon }) => {
   return (
-    <div className='skill-container'>
+    <div className='skill-container' onClick={() => OutsideLink(title)}>
       {icon}
       {title}
     </div>
