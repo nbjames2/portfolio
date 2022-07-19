@@ -3,6 +3,31 @@
   display: flex;
   border-bottom: 1px solid #66fcf1;
   margin: 0 1rem;
+  
+  .name-fade {
+    transform-origin: center 36px;
+    perspective: 1000px;
+
+    &.hover {
+      animation: flipLettersUp 1s forwards;
+    }
+
+    &.no-hover {
+      animation: flipLettersDown 3s forwards;
+
+      &.part1 {
+        animation-delay: 1s;
+      }
+
+      &.part2 {
+        animation-delay: 4s;
+      }
+
+      &.part3 {
+        animation-delay: 1.5s;
+      }
+    }
+  }
 
   i {
     position: absolute;
@@ -12,14 +37,6 @@
     cursor: pointer;    
   }
 
-  &:hover, :active {
-    .name-fade {
-      animation: flipLettersUp 1s forwards;
-      transform-origin: center 55px;
-      perspective: 1000px;
-    }
-  }
-
   h1 {
     font-size: 68px;
     margin: 0;
@@ -27,23 +44,6 @@
     line-height: 36px;
   }
   
-  .name-fade {
-    animation: flipLettersDown 3s forwards;
-    transform-origin: center 36px;
-    perspective: 1000px;
-
-    &.part1 {
-      animation-delay: 1s;
-    }
-
-    &.part2 {
-      animation-delay: 4s;
-    }
-
-    &.part3 {
-      animation-delay: 1.5s;
-    }
-  }
 
   @media only screen and (max-width: 768px) {
     .name-container{

@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { ProjectInfoDialog } from 'Components';
 import './Name.scss';
 
-const Name = () => {
+const Name = ({ hover }) => {
   const [infoOpen, setInfoOpen] = useState(false);
 
   return (
     <>
       <div className='name-container'>
-        <span className='title-bar-piece name-fade part1'><h1>Nicholas</h1></span>
+        <span className={hover ? 'title-bar-piece name-fade hover part1' : 'title-bar-piece name-fade no-hover part1'}><h1>Nicholas</h1></span>
         <h1 className='title-bar-piece'>Bair</h1>
-        <span className='title-bar-piece name-fade part2'><h1>d </h1></span>
+        <span className={hover ? 'title-bar-piece name-fade hover part2' : 'title-bar-piece name-fade no-hover part2'}><h1>d </h1></span>
         <h1 className='title-bar-piece'>Jam</h1>
-        <span className='title-bar-piece name-fade part3'><h1>es</h1></span>
+        <span className={hover ? 'title-bar-piece name-fade hover part3' : 'title-bar-piece name-fade no-hover part3'}><h1>es</h1></span>
         <i className='material-icons-outlined' onClick={() => setInfoOpen(true)}>info</i>
       </div>
       {infoOpen &&
